@@ -1,13 +1,4 @@
-// Theme Toggle
-const themeBtn = document.getElementById('theme-toggle');
-const body = document.body;
 
-themeBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    const icon = themeBtn.querySelector('i');
-    icon.classList.toggle('fa-sun');
-    icon.classList.toggle('fa-moon');
-});
 
 // Scroll Reveal Animation
 const observer = new IntersectionObserver((entries) => {
@@ -106,4 +97,5 @@ setInterval(() => {
 // Manual Click Support
 clientItems.forEach((item, index) => {
     item.addEventListener('click', () => updateTestimonial(index));
+
 });
