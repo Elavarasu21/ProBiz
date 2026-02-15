@@ -908,20 +908,30 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
     z-index: -2;
     transition: transform 0.1s ease-out;
 }
-footer {
-    margin: 0;
-    padding: 20px 0;
-}
+
 #contact {
     padding-bottom: 40px;
 }
 html, body {
     height: 100%;
     overflow-x: hidden;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+main {
+    flex: 1;
+}
+
 footer {
-    display: block;
     position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto;
+    color: var(--secondary);
+    font-size: 14px;
 }
 #liquid-cursor {
     position: fixed;
@@ -938,4 +948,5 @@ html {
 section {
     scroll-margin-top: 100px;
 }
+
 
