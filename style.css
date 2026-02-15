@@ -139,7 +139,6 @@ border-bottom: 1px solid rgba(255,255,255,0.05);
 .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; }
 .logo span { color: var(--primary); }
 
-.nav-links { display: flex; list-style: none; gap: 2.5rem; }
 .nav-links a { 
     text-decoration: none; 
     color: var(--text-color); 
@@ -147,7 +146,10 @@ border-bottom: 1px solid rgba(255,255,255,0.05);
     opacity: 0.8;
     transition: var(--transition);
 }
-.nav-links a:hover { opacity: 1; color: var(--primary); }
+.nav-links a:hover { 
+    opacity: 1; 
+    color: var(--primary); 
+}
 
 /* --- FIX: Professional Hero Alignment --- */
 .hero { 
@@ -853,5 +855,6 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
         transform: translateY(0) scale(1);
     }
 }
+
 
 
