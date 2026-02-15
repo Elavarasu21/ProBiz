@@ -239,18 +239,27 @@
 
         <div class="contact-right">
             <div class="form-container glass">
-                <form action="https://formspree.io/f/gowthamelavarasu.p@gmail.com" method="POST">
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="Your e-mail" required>
-                    </div>
-                    <div class="input-group">
-                        <textarea name="message" placeholder="Your message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-send">Send</button>
-                </form>
+               <form id="contactForm" action="https://formsubmit.co/gowthamelavarasu.p@gmail.com" method="POST">
+    <div class="input-group">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+    </div>
+    <div class="input-group">
+        <input type="email" name="email" placeholder="Your Email Address" required>
+    </div>
+    <div class="input-group">
+        <input type="text" name="subject" placeholder="Subject (optional)">
+    </div>
+    <div class="input-group">
+        <textarea name="message" placeholder="Describe your project, idea, or opportunity..." rows="5" required></textarea>
+    </div>
+    <!-- Anti-spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://Elavarasu21.github.io/my-portfolio/">
+    <button type="submit" class="btn-send">Send Message</button>
+    <p id="status" style="text-align:center;margin-top:10px;font-size:14px;color:#555;"></p>
+</form>
+
             </div>
         </div>
     </div>
@@ -265,4 +274,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
