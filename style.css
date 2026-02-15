@@ -30,7 +30,7 @@ body {
 
 /* --- FIX: Global Alignment Engine --- */
 section {
-    padding: 100px 10%; 
+    padding: 60px 10%; 
     max-width: 1400px;  /* Keeps content from stretching to the edges */
     margin: 0 auto;     /* Centers every section on the screen */
     display: flex;
@@ -135,6 +135,7 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
+.splash { background:red; }
 
 .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; }
 .logo span { color: var(--primary); }
@@ -171,7 +172,7 @@ body {
     justify-content: center; 
     text-align: center; 
     padding: 180px 10% 100px;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 .hero-content {
@@ -217,17 +218,24 @@ body {
     width: 100%; /* Ensures grid takes full width of container */
 }
 
-.service-card, .price-card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.08);
+.service-card, .price-card { 
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    padding: 3rem 2rem; 
+    border-radius: 24px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers icons and text inside cards */
+    transition: var(--transition);
 }
-
 .service-card i {
     font-size: 2.5rem;
     color: var(--primary);
     margin-bottom: 1.5rem;
 }
+
 
 .service-card:hover, .price-card:hover { 
     transform: translateY(-15px) scale(1.02); 
@@ -516,15 +524,11 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
 }
 
 @media (max-width: 768px) {
-    .testi-container {
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255,255,255,0.08);
-}
+.testi-container { grid-template-columns: 1fr; padding: 30px; }}
 /* --- Consolidated Blog Styles --- */
 .blog {
     position: relative;
-    padding: 100px 10%;
+    padding: 60px 10%;
     background: transparent; /* Changed to transparent to inherit body/theme bg */
     overflow: hidden;
 }
@@ -607,13 +611,15 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
 }
 
 /* --- Transparent Glass Cards --- */
-.blog-featured,
-.side-card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
+.blog-featured, .side-card {
+    background: var(--glass-bg); /* Removed the gray background */
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px; /* Professional curve */
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+} 
 .blog-featured:hover, .side-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
@@ -719,6 +725,7 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: auto;
     gap: 50px;
     width: 100%;
 }
@@ -762,11 +769,14 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
 
 /* Form Styling */
 .form-container {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255,255,255,0.08);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
 }
-
 
 .input-group input, .input-group textarea {
     width: 100%;
@@ -805,6 +815,23 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
     .contact-wrapper { flex-direction: column; text-align: center; }
     .contact-right { justify-content: center; }
     .social-container { justify-content: center; }
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.logo-img {
+    height: 35px;
+    width: auto;
+}
 
 }
 /* =========================
@@ -817,7 +844,7 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -3;
+    z-index: -4;
     overflow: hidden;
 }
 
@@ -868,7 +895,47 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
         transform: translateY(0) scale(1);
     }
 }
+/* Cursor Glow Effect */
 
-
-
+.cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59,130,246,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    transition: transform 0.1s ease-out;
+}
+footer {
+    margin: 0;
+    padding: 20px 0;
+}
+#contact {
+    padding-bottom: 40px;
+}
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+footer {
+    display: block;
+    position: relative;
+}
+#liquid-cursor {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(30px);
+}
+html {
+    scroll-padding-top: 100px;
+}
+section {
+    scroll-margin-top: 100px;
+}
 
