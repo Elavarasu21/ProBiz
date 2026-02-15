@@ -747,6 +747,7 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
 .social-icon.li { background: #0077b5; }
 .social-icon.gh { background: #333; }
 .social-icon.ig { background: #e1306c; }
+.social-icon.gm { background: #EA4335; }
 .social-icon.ph { background: #10b981; }
 
 .social-icon:hover { transform: translateY(-5px) scale(1.1); filter: brightness(1.2); }
@@ -801,3 +802,4 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
     .social-container { justify-content: center; }
 
 }
+
