@@ -1,27 +1,15 @@
-/* --- Core Variables & Professional Extensions --- */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --primary: #2563eb;
-    --primary-glow: rgba(37, 99, 235, 0.15); 
-    --secondary: #64748b;
-    --card-bg: #f8fafc;
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --glass-bg: rgba(255, 255, 255, 0.6); 
-    --glass-border: rgba(255, 255, 255, 0.4);
-    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    --shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-}
-
-.dark-theme {
-    --bg-color: #020617; 
+    --bg-color: #020617;
     --text-color: #f1f5f9;
     --primary: #3b82f6;
+    --primary-glow: rgba(59, 130, 246, 0.15);
     --secondary: #94a3b8;
     --card-bg: #0f172a;
     --nav-bg: rgba(2, 6, 23, 0.8);
     --glass-bg: rgba(15, 23, 42, 0.6);
     --glass-border: rgba(255, 255, 255, 0.05);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -811,4 +799,5 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
     .contact-wrapper { flex-direction: column; text-align: center; }
     .contact-right { justify-content: center; }
     .social-container { justify-content: center; }
+
 }
