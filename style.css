@@ -126,18 +126,31 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.2rem 10%;
+    padding: 1.2rem 5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: rgba(15, 23, 42, 0.4);
-backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
     z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+
 
 .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; }
 .logo span { color: var(--primary); }
+.nav-extras {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-left: auto; /* 🔥 This pushes menu to top right */
+}
 
 .nav-links a { 
     text-decoration: none; 
@@ -855,6 +868,7 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4p
         transform: translateY(0) scale(1);
     }
 }
+
 
 
 
